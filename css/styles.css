@@ -30,6 +30,15 @@
 
 body {
     background-color: black;
+
+    display: grid;
+    grid-template-areas:
+    'a1 a2 a3 a4'
+    'b1 b2 b3 b4'
+    'c1 c2 c3 c4'
+    'd1 d2 d3 d4';
+
+    grid-template-columns:
 }
 
 .title {
@@ -40,6 +49,11 @@ body {
     justify-content:center;
 }
 
+span.space {
+    padding: 0 5px !important;
+    margin:0 1px;
+}
+
 .letter {
     font-size: 80px;
     margin: 20px;
@@ -48,16 +62,18 @@ body {
     display: inline-block;
     user-select: none !important;
     animation: glow 1s ease-in-out infinite alternate;
+    z-index: 1;
 }
 
 #underscore {
-    font-size: 80px;
+    font-size: 100px;
     font-family: 'areal';
     color: white;
     display: inline-block;
     user-select: none !important;
     animation: glow 1s ease-in-out infinite alternate;
-    transform: translate(0px, -60px)
+    transform: translate(0px, -70px);
+    z-index: 0;
 }
 
 break {  
