@@ -35,6 +35,7 @@ body {
 .title {
     padding: 15px;
     display: flex;
+    flex-wrap: wrap;
     align-content: center;
     justify-content:center;
 }
@@ -47,6 +48,23 @@ body {
     display: inline-block;
     user-select: none !important;
     animation: glow 1s ease-in-out infinite alternate;
+}
+
+#underscore {
+    font-size: 80px;
+    font-family: 'areal';
+    color: white;
+    display: inline-block;
+    user-select: none !important;
+    animation: glow 1s ease-in-out infinite alternate;
+    transform: translate(0px, -60px)
+}
+
+break {  
+    flex-basis: 100%;
+    width: 0px; 
+    height: 0px; 
+    overflow: hidden;
 }
 
 span.letter:nth-child(even):hover {
