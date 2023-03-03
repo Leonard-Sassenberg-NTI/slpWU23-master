@@ -63,6 +63,7 @@ span.space {
     user-select: none !important;
     animation: glow 1s ease-in-out infinite alternate;
     z-index: 1;
+    animation:
 }
 
 #underscore {
@@ -83,12 +84,40 @@ break {
     overflow: hidden;
 }
 
-span.letter:nth-child(even):hover {
-    transform: rotate(6deg) translate(0px, 4px);
+span.letter:nth-child(even) {
+    animation: even 0.2s reverse forwards;
 }
-  
+
+span.letter:nth-child(even):hover {
+    animation: even 0.2s forwards;
+}
+
+@keyframes even {
+    0% {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+
+    100% {
+        transform: rotate(6deg) translate(0px, 4px);
+    }
+}
+
+span.letter:nth-child(odd) {
+    animation: odd 0.2s reverse forwards;
+}
+
 span.letter:nth-child(odd):hover {
-    transform: rotate(-4deg) translate(0px, 6px);
+    animation: odd 0.2s forwards;
+}
+
+@keyframes odd {
+    0% {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+    
+    100% {
+        transform: rotate(-4deg) translate(0px, 6px);
+    }
 }
 
 .fade {
