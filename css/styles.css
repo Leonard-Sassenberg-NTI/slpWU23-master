@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'nintendoid_1regular';
+    src: url('/misc/nintendoid_1-webfont.woff2') format('woff2'),
+         url('/misc/nintendoid_1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background-color: black;
+}
+
+.title {
+    font-size: 80px;
+    font-family: 'nintendoid_1regular';
+    color: white;
+    padding: 15px;
+    display: block;
+}
