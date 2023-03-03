@@ -4,7 +4,18 @@
          url('/misc/nintendoid_1-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
 
+@keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: .5;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 
 body {
@@ -17,4 +28,9 @@ body {
     color: white;
     padding: 15px;
     display: block;
+    animation: blink 2s linear infinite;
+}
+
+.glitch {
+
 }
