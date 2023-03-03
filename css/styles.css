@@ -23,12 +23,16 @@ body {
 }
 
 .title {
+    padding: 15px;
+}
+
+.letter {
     font-size: 80px;
     font-family: 'nintendoid_1regular';
     color: white;
-    padding: 15px;
-    display: block;
+    display: inline-block;
     animation: blink 2s linear infinite;
+    animation-direction: alternate;
 }
 
 .glitch {
