@@ -33,8 +33,21 @@ body {
     display: inline-block;
     animation: blink 2s linear infinite;
     animation-direction: alternate;
+    user-select: none !important;
+
 }
+
+span.letter:nth-child(even):hover {
+    transform: rotate(5deg) translate(0px, 5px);
+}
+  
+span.letter:nth-child(odd):hover {
+    transform: rotate(-5deg) translate(0px, 5px);
+}
+
 
 .glitch {
 
 }
+
+/* filter: blur(1px);
