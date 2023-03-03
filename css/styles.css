@@ -29,7 +29,9 @@
 }
 
 body {
-    background-color: black;
+    background-image: url("/img/night\ var3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 
     display: grid;
     grid-template-areas:
@@ -37,8 +39,6 @@ body {
     'b1 b2 b3 b4'
     'c1 c2 c3 c4'
     'd1 d2 d3 d4';
-
-    grid-template-columns:
 }
 
 .title {
