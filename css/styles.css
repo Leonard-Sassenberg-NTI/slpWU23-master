@@ -24,6 +24,9 @@ body {
 
 .title {
     padding: 15px;
+    display: flex;
+    align-content: center;
+    justify-content:center;
 }
 
 .letter {
@@ -31,23 +34,21 @@ body {
     font-family: 'nintendoid_1regular';
     color: white;
     display: inline-block;
-    animation: blink 2s linear infinite;
-    animation-direction: alternate;
     user-select: none !important;
-
+    text-shadow: 0 0 4px #eeeeee, 0 0 16px #ffffff
 }
 
 span.letter:nth-child(even):hover {
-    transform: rotate(5deg) translate(0px, 5px);
+    transform: rotate(6deg) translate(0px, 4px);
 }
   
 span.letter:nth-child(odd):hover {
-    transform: rotate(-5deg) translate(0px, 5px);
+    transform: rotate(-4deg) translate(0px, 6px);
 }
 
-
-.glitch {
-
+.fade {
+    animation: blink 1.5s linear infinite;
+    animation-direction: alternate;
 }
 
 /* filter: blur(1px);
