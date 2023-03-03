@@ -18,6 +18,16 @@
     }
 }
 
+@keyframes glow {
+    from {
+    text-shadow: 0 0 4px white, 0 0 14px white
+    }
+
+    to {
+        text-shadow: 0 0 6px white, 0 0 18px white
+    }
+}
+
 body {
     background-color: black;
 }
@@ -31,11 +41,12 @@ body {
 
 .letter {
     font-size: 80px;
+    margin: 20px;
     font-family: 'nintendoid_1regular';
     color: white;
     display: inline-block;
     user-select: none !important;
-    text-shadow: 0 0 4px #eeeeee, 0 0 16px #ffffff
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
 span.letter:nth-child(even):hover {
@@ -47,8 +58,7 @@ span.letter:nth-child(odd):hover {
 }
 
 .fade {
-    animation: blink 1.5s linear infinite;
-    animation-direction: alternate;
+    animation: blink 1s linear infinite alternate;
 }
 
 /* filter: blur(1px);
