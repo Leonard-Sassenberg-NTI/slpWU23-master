@@ -20,11 +20,11 @@
 
 @keyframes glow {
     from {
-    text-shadow: 0 0 4px white, 0 0 14px white
+        text-shadow: 0 0 4px white, 0 0 14px white
     }
 
     to {
-        text-shadow: 0 0 6px white, 0 0 18px white
+        text-shadow: 0 0 8px white, 0 0 18px white
     }
 }
 
@@ -34,11 +34,11 @@ body {
     background-repeat: no-repeat;
 
     display: grid;
-    grid-template-areas:
-    'a1 a2 a3 a4'
-    'b1 b2 b3 b4'
-    'c1 c2 c3 c4'
-    'd1 d2 d3 d4';
+    /* grid-template-areas:
+    'a1 a2 a3 a4 a5'
+    'b1 b2 b3 b4 b5'
+    'c1 c2 c3 c4 c5'
+    'd1 d2 d3 d4 d5'; */
 }
 
 .title {
@@ -47,11 +47,17 @@ body {
     flex-wrap: wrap;
     align-content: center;
     justify-content:center;
+    height: 30vh;
 }
 
 span.space {
     padding: 0 5px !important;
-    margin:0 1px;
+    margin: 0 1px;
+}
+
+.let {
+    display: inline-block;
+    z-index: 1;
 }
 
 .letter {
@@ -61,9 +67,7 @@ span.space {
     color: white;
     display: inline-block;
     user-select: none !important;
-    animation: glow 1s ease-in-out infinite alternate;
-    z-index: 1;
-    animation:
+
 }
 
 #underscore {
@@ -82,14 +86,31 @@ break {
     width: 0px; 
     height: 0px; 
     overflow: hidden;
+    background: grey;
 }
 
-span.letter:nth-child(even) {
-    animation: even 0.2s reverse forwards;
+@keyframes scale {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
 }
 
-span.letter:nth-child(even):hover {
-    animation: even 0.2s forwards;
+span.letter:hover {
+    transition: transform 0.05s ease-in-out;
+    transform: scale(1.4);
+}
+
+div.let:nth-child(even) {
+    animation: even 2s ease-in-out infinite alternate, glow 2s ease-in-out infinite alternate;
+}
+
+
+div.let:nth-child(odd) {
+    animation: odd 2s ease-in-out infinite alternate, glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes even {
@@ -100,14 +121,6 @@ span.letter:nth-child(even):hover {
     100% {
         transform: rotate(6deg) translate(0px, 4px);
     }
-}
-
-span.letter:nth-child(odd) {
-    animation: odd 0.2s reverse forwards;
-}
-
-span.letter:nth-child(odd):hover {
-    animation: odd 0.2s forwards;
 }
 
 @keyframes odd {
