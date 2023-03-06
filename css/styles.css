@@ -32,13 +32,11 @@ body {
     background-image: url("/img/night\ var3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+}
 
+.grid-item1 {
     display: grid;
-    /* grid-template-areas:
-    'a1 a2 a3 a4 a5'
-    'b1 b2 b3 b4 b5'
-    'c1 c2 c3 c4 c5'
-    'd1 d2 d3 d4 d5'; */
+    background: red;
 }
 
 .title {
@@ -47,16 +45,15 @@ body {
     flex-wrap: wrap;
     align-content: center;
     justify-content:center;
-    height: 30vh;
+    height: 20vh;
 }
 
 span.space {
-    padding: 0 5px !important;
+    padding: 0 7.5px !important;
     margin: 0 1px;
 }
 
 .let {
-    display: inline-block;
     z-index: 1;
 }
 
@@ -79,6 +76,8 @@ span.space {
     animation: glow 1s ease-in-out infinite alternate;
     transform: translate(0px, -70px);
     z-index: 0;
+
+    /* background: linear-gradient(0deg, rgba(255,255,255,0.7) 0%, rgba(0,0,0,0) 40%); */
 }
 
 break {  
@@ -137,4 +136,23 @@ div.let:nth-child(odd) {
     animation: blink 1s linear infinite alternate;
 }
 
+#grid-container {
+    width: 800px;
+    height: 70px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr)
+}
+
+.grid-item {
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.grid-item.span {
+    display:flex;
+}
 /* filter: blur(1px);
