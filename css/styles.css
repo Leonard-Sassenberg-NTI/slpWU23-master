@@ -64,7 +64,6 @@ span.space {
     color: white;
     display: inline-block;
     user-select: none !important;
-
 }
 
 #underscore {
@@ -136,7 +135,7 @@ div.let:nth-child(odd) {
     animation: blink 1s linear infinite alternate;
 }
 
-#grid-container {
+#nav-buttons {
     width: 800px;
     height: 70px;
     margin: -45px auto;
@@ -156,6 +155,7 @@ div.let:nth-child(odd) {
     margin: 5px;
     font-family: 'nintendoid_1regular';
     font-size: 35px;
+    user-select: none !important;
 
     /*background-color: red;
     border-style: solid;
