@@ -39,13 +39,13 @@ body {
     background: red;
 }
 
-.title {
+#title {
     padding: 15px;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    justify-content:center;
-    height: 20vh;
+    justify-content: center;
+    z-index: 1;
 }
 
 span.space {
@@ -75,6 +75,7 @@ span.space {
     animation: glow 1s ease-in-out infinite alternate;
     transform: translate(0px, -70px);
     z-index: 0;
+    filter: blur(1px);
 
     /* background: linear-gradient(0deg, rgba(255,255,255,0.7) 0%, rgba(0,0,0,0) 40%); */
 }
@@ -95,11 +96,6 @@ break {
     to {
         transform: scale(1.2);
     }
-}
-
-span.letter:hover {
-    transition: transform 0.05s ease-in-out;
-    transform: scale(1.4);
 }
 
 div.let:nth-child(even) {
@@ -136,11 +132,11 @@ div.let:nth-child(odd) {
 }
 
 #nav-buttons {
+    display: grid;
     width: 800px;
     height: 70px;
     margin: -45px auto;
-    display: grid;
-    
+
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(1, 2fr)
 }
@@ -156,14 +152,46 @@ div.let:nth-child(odd) {
     font-family: 'nintendoid_1regular';
     font-size: 35px;
     user-select: none !important;
-
     /*background-color: red;
     border-style: solid;
     border-color: white;
     border-radius: 5px; */
 }
 
-.grid-item.span {
-    display:flex;
+.grid-item:hover {
+    transition: transform 0.05s ease-in-out;
+    transform: scale(1.2);
 }
-/* filter: blur(1px);
+
+#navbar-grid {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'a1'
+    'a2'
+    'a3'
+    'a4';
+}
+
+#nav-title {
+    grid-area: a1;
+    
+}
+
+#backdrop {
+    left: 25%; 
+    right: 25%;
+    height: 310px;
+    background-color: rgb(98, 54, 54);
+    opacity: 50%;
+    z-index: -1;
+    position: absolute;
+    border-radius:28px;
+}
+
+#nav-tab {
+    grid-area: a2;
+    align-items: center;
+}
+
