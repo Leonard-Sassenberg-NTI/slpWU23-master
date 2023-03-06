@@ -139,17 +139,28 @@ div.let:nth-child(odd) {
 #grid-container {
     width: 800px;
     height: 70px;
-    margin: 0 auto;
+    margin: -45px auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr)
+    
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(1, 2fr)
 }
 
 .grid-item {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color: white;
+
+    animation: glow 1s ease-in-out infinite alternate;
+    margin: 5px;
+    font-family: 'nintendoid_1regular';
+    font-size: 35px;
+
+    /*background-color: red;
     border-style: solid;
     border-color: white;
-    border-radius: 5px;
-    margin: 5px;
+    border-radius: 5px; */
 }
 
 .grid-item.span {
