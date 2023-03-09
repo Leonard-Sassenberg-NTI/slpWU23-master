@@ -32,11 +32,7 @@ body {
     background-image: url("/img/night\ var3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.grid-item1 {
-    display: grid;
-    background: red;
+    margin: 0px;
 }
 
 #title {
@@ -99,13 +95,15 @@ break {
 }
 
 div.let:nth-child(even) {
-    animation: even 2s ease-in-out infinite alternate, glow 2s ease-in-out infinite alternate;
+    animation: even 2s ease-in-out infinite alternate, glow 2s ease-in-out infinite alternate;;
 }
 
 
 div.let:nth-child(odd) {
-    animation: odd 2s ease-in-out infinite alternate, glow 2s ease-in-out infinite alternate;
+    animation: odd 2s ease-in-out infinite alternate, glow 2s ease-in-out infinite alternate;; 
 }
+
+/*glow 2s ease-in-out infinite alternate;*/
 
 @keyframes even {
     0% {
@@ -147,25 +145,29 @@ div.let:nth-child(odd) {
     justify-content:center;
     color: white;
 
-    animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
     margin: 5px;
     font-family: 'nintendoid_1regular';
     font-size: 35px;
     user-select: none !important;
+    z-index: 1;
     /*background-color: red;
     border-style: solid;
     border-color: white;
     border-radius: 5px; */
 }
 
-.grid-item:hover {
-    transition: transform 0.05s ease-in-out;
+.nav-but:hover {
+    transition: transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
     transform: scale(1.2);
+    /*text-shadow: 2px 2px #ff0000;*/
+    text-decoration: underline;
 }
 
 #navbar-grid {
+    max-width: 1200px;
     display:grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: (auto-fit, minmax(1fr));
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     'a1'
@@ -175,17 +177,17 @@ div.let:nth-child(odd) {
 }
 
 #nav-title {
+    display:grid;
     grid-area: a1;
-    
 }
 
 #backdrop {
-    left: 25%; 
-    right: 25%;
-    height: 310px;
+    place-self: center;
+    width: 1000px;
+    height: 10000px;
     background-color: rgb(98, 54, 54);
     opacity: 50%;
-    z-index: -1;
+    z-index: -2;
     position: absolute;
     border-radius:28px;
 }
