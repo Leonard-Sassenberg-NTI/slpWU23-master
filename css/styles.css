@@ -1,197 +1,26 @@
-@font-face {
-    font-family: 'nintendoid_1regular';
-    src: url('/misc/nintendoid_1-webfont.woff2') format('woff2'),
-         url('/misc/nintendoid_1-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@keyframes blink {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: .5;
-    }
-    100% {
-      opacity: 1;
-    }
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 0 0 4px white, 0 0 14px white
-    }
-
-    to {
-        text-shadow: 0 0 8px white, 0 0 18px white
-    }
-}
-
 body {
-    background-image: url("/img/night\ var3.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 30px;
 }
 
-.grid-item1 {
+.grid-container {
+    height: 100vh;
+    border: 10px solid greenyellow;
     display: grid;
-    background: red;
-}
-
-#title {
-    padding: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    z-index: 1;
-}
-
-span.space {
-    padding: 0 7.5px !important;
-    margin: 0 1px;
-}
-
-.let {
-    z-index: 1;
-}
-
-.letter {
-    font-size: 80px;
-    margin: 20px;
-    font-family: 'nintendoid_1regular';
-    color: white;
-    display: inline-block;
-    user-select: none !important;
-}
-
-#underscore {
-    font-size: 100px;
-    font-family: 'areal';
-    color: white;
-    display: inline-block;
-    user-select: none !important;
-    animation: glow 1s ease-in-out infinite alternate;
-    transform: translate(0px, -70px);
-    z-index: 0;
-    filter: blur(1px);
-
-    /* background: linear-gradient(0deg, rgba(255,255,255,0.7) 0%, rgba(0,0,0,0) 40%); */
-}
-
-break {  
-    flex-basis: 100%;
-    width: 0px; 
-    height: 0px; 
-    overflow: hidden;
-    background: grey;
-}
-
-@keyframes scale {
-    from {
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(1.2);
-    }
-}
-
-div.let:nth-child(even) {
-    animation: even 2s ease-in-out infinite alternate, glow 2s ease-in-out infinite alternate;
-}
-
-
-div.let:nth-child(odd) {
-    animation: odd 2s ease-in-out infinite alternate, glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes even {
-    0% {
-        transform: rotate(0deg) translate(0px, 0px);
-    }
-
-    100% {
-        transform: rotate(6deg) translate(0px, 4px);
-    }
-}
-
-@keyframes odd {
-    0% {
-        transform: rotate(0deg) translate(0px, 0px);
-    }
-    
-    100% {
-        transform: rotate(-4deg) translate(0px, 6px);
-    }
-}
-
-.fade {
-    animation: blink 1s linear infinite alternate;
-}
-
-#nav-buttons {
-    display: grid;
-    width: 800px;
-    height: 70px;
-    margin: -45px auto;
-
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(1, 2fr)
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px 15px; 
 }
 
 .grid-item {
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    color: white;
-
-    animation: glow 1s ease-in-out infinite alternate;
-    margin: 5px;
-    font-family: 'nintendoid_1regular';
-    font-size: 35px;
-    user-select: none !important;
-    /*background-color: red;
-    border-style: solid;
-    border-color: white;
-    border-radius: 5px; */
+    background-color: rgb(223, 82, 82);
+    border: 4px solid turquoise;
+    padding: 15px;
 }
 
-.grid-item:hover {
-    transition: transform 0.05s ease-in-out;
-    transform: scale(1.2);
+.item-1{
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
-
-#navbar-grid {
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    'a1'
-    'a2'
-    'a3'
-    'a4';
-}
-
-#nav-title {
-    grid-area: a1;
-    
-}
-
-#backdrop {
-    left: 25%; 
-    right: 25%;
-    height: 310px;
-    background-color: rgb(98, 54, 54);
-    opacity: 50%;
-    z-index: -1;
-    position: absolute;
-    border-radius:28px;
-}
-
-#nav-tab {
-    grid-area: a2;
-    align-items: center;
-}
-
