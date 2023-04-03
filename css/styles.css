@@ -3,15 +3,18 @@
 :root {
     --menu-shadow: 0px 0px 0px #b7b7b7;
     --hover-color: #a06464;
+    --footer-color: #d2d2d2;
 }
 
 body {
+    font-family: 'Caudex', serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     height: 100vh;
     border: 10px solid rgba(255, 255, 255, 0);
-    background-color: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+    text-rendering: optimizeLegibility;
 }
 
 .grid-container {
@@ -25,11 +28,12 @@ body {
 
 .grid-item {
     background-color: rgb(255, 255, 255);
-    border: 4px solid rgb(211, 211, 211);
+    border: 4px solid rgb(211, 211, 211, 0.5);
     padding: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;
+    user-select: none;
 }
 
 .item-1{
@@ -45,7 +49,7 @@ body {
 
 .item-3{
     grid-area: 2 / 1 / span 3 / span 2;
-
+    padding: 0px 30px;
 }
 
 .item-4{
@@ -66,7 +70,6 @@ h1 span {
     display: inline-flex;
     z-index: 5;
     font-size: 160px;
-    font-family: 'Caudex', serif;
     font-weight: lighter;
     z-index: 5;
     font-size: 160px;
@@ -97,6 +100,7 @@ h1:hover > span:nth-child(odd){
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: center;
 }
 
 .social-menu ul li {
@@ -158,7 +162,7 @@ h1:hover > span:nth-child(odd){
 
 .side-menu ul li a i{
     color: rgb(56, 53, 53);
-    font-size: 25px;
+    font-size: 36px;
     line-height: 50px;
     transition: .3s;
 }
@@ -181,7 +185,7 @@ h1:hover > span:nth-child(odd){
 }
 
 #main-menu {
-    font-family: 'Caudex', serif;
+    
     display:flex;
     justify-content: space-evenly;
     font-size: 40px;
@@ -212,4 +216,24 @@ h1:hover > span:nth-child(odd){
 #main-menu ul li a:hover {
     transform: scale(1.2);
     color: var(--hover-color);
+}
+
+footer {
+    padding: 3rem;
+    background: var(--footer-color);
+    display:flex;
+    justify-content: center;
+    text-align:center;
+    column-gap: 0px;
+}
+
+#container {
+
+}
+
+.copyright {
+    margin-top:20px;
+    border-spacing: 5px;
+    font-size:20px;
+    font-weight: lighter;
 }
