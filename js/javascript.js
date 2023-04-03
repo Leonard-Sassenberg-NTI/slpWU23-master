@@ -15,7 +15,7 @@ function topFunction() {
 };
 
 var splashScreen = document.querySelector('#splash-placement');
-var splashBtn = document.querySelector('.Enter');
+var splashBtn = document.querySelector('#Enter');
 
 splashBtn.addEventListener('click',()=>{
   splashScreen.style.opacity = 0;
@@ -26,7 +26,7 @@ splashBtn.addEventListener('click',()=>{
 
 var timelineOptions = { repeat: -1, paused: true };
 var tl = new TimelineMax(timelineOptions);
-tl.fromTo(".Enter", 0.3, {
+tl.fromTo("#Enter", 0.3, {
     x: -1, y: 1
   }, {
     x: 1, y: -1,
@@ -37,7 +37,7 @@ tl.fromTo(".Enter", 0.3, {
       randomize: true
     })
   });
-tl.fromTo(".Enter", 0.3, {
+tl.fromTo("#Enter", 0.3, {
     x: 1, y: -1
   }, {
     x: 1, y: 1,
@@ -48,7 +48,7 @@ tl.fromTo(".Enter", 0.3, {
       randomize: true
     })
   });
-tl.fromTo(".Enter", 0.3, {
+tl.fromTo("#Enter", 0.3, {
     x: 1, y: 1
   }, {
     x: -1, y: -1,
@@ -59,7 +59,7 @@ tl.fromTo(".Enter", 0.3, {
       randomize: true
     })
   });
-tl.fromTo(".Enter", 0.3, {
+tl.fromTo("#Enter", 0.3, {
     x: -1, y: -1
   }, {
     x: -1, y: 1,
@@ -71,12 +71,12 @@ tl.fromTo(".Enter", 0.3, {
     })
   });
 
-$('.Enter').hover(function () {
+$('#Enter').hover(function () {
   tl.resume();
 }, function () {
   tl.pause();
 });
 
-$('.Enter').click(function () {
+$('#Enter').click(function () {
   tl.pause();
 });

@@ -32,12 +32,13 @@ body {
 }
 
 .splashscreen {
-    height : 90%;
+    height: 100vh;
     display:flex;
     justify-content:center;
     align-items: center;
     flex-direction: column;
-    background-image: url("img\one_cross.png");
+    background: url("../img/one_cross.png") no-repeat top center;
+    background-size: 200px;
 }
 
 .hidden{
@@ -45,12 +46,16 @@ body {
     visibility: hidden;
 }
 
-.Enter {
+#Enter {
     display:block;
     cursor: pointer;
     color: var(--grey);
     text-decoration: none;
     font-size: 20px;
+}
+
+#Enter:hover {
+    text-decoration:line-through;
 }
 
 .grid-container {
