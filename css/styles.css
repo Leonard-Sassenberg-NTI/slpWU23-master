@@ -141,3 +141,40 @@ h1:hover > span:nth-child(odd){
 .social-menu ul li:nth-child(3) a:hover {
     background-color: rgb(56, 53, 53);
 }
+
+
+
+
+.side-menu ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.side-menu ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.side-menu ul li a i{
+    color: rgb(56, 53, 53);
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+
+.side-menu ul li a:hover > i{
+    color: #d07878;
+}
+
+.side-menu ul li a {
+    position: relative;
+    display: block;
+    transition: 0.3s;
+    transform: translate(0,0px);
+    background-color: white;
+    text-align: center;
+}
+.side-menu ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -5px);
+}
