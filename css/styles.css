@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Caudex&display=swap');
 
+:root {
+    --menu-shadow: 0px 0px 0px #b7b7b7;
+    --hover-color: #a06464;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -19,7 +24,7 @@ body {
 }
 
 .grid-item {
-    background-color: rgb(209, 200, 200);
+    background-color: rgb(255, 255, 255);
     border: 4px solid rgb(211, 211, 211);
     padding: 15px;
     -webkit-border-radius: 15px;
@@ -54,6 +59,7 @@ body {
 
 #title {
     display:flex;
+    text-shadow:var(--menu-shadow);
 }
 
 h1 span {
@@ -64,26 +70,27 @@ h1 span {
     font-weight: lighter;
     z-index: 5;
     font-size: 160px;
+    transition: 0.3s;
     color: rgb(56, 53, 53);
-    /*text-decoration: line-through rgb(0, 0, 0);*/
-    text-decoration-thickness: 4px;
 }
 
 span:nth-child(even) {
     overflow: hidden;
     transition: ease-in-out 0.3s;
     color: rgb(56, 53, 53);
-    /*text-decoration: line-through rgb(0, 0, 0);*/
-    border-bottom: 8px solid rgb(56, 53, 53); 
+    /*text-decoration: line-through rgb(0, 0, 0);
+    border-bottom: 7px solid #d07878; */
     letter-spacing: -1em;
+    font-size: 120px;
 }
 
 h1:hover span:nth-child(even) {
     letter-spacing: 0;
+    color: var(--hover-color);
 }
 
 h1:hover > span:nth-child(odd){ 
-    /*text-decoration: none;*/
+    color: var(--hover-color);
 }
 
 .social-menu ul {
@@ -133,11 +140,15 @@ h1:hover > span:nth-child(odd){
     background-color: rgb(56, 53, 53);
 }
 
+.side-menu {
+    transform: translate(0%, 80%); 
+}
 
 .side-menu ul {
     padding: 0;
     margin: 0;
     display: flex;
+    
 }
 
 .side-menu ul li {
@@ -149,17 +160,18 @@ h1:hover > span:nth-child(odd){
     color: rgb(56, 53, 53);
     font-size: 25px;
     line-height: 50px;
-    transition: .5s;
+    transition: .3s;
 }
 
 .side-menu ul li a:hover > i{
-    color: #d07878;
+    color: var(--hover-color);
+    transform: scale(1.2);
 }
 
 .side-menu ul li {
     position: relative;
     display: block;
-    transition: 0.3s;
+    transition: .3s;
     transform: translate(0,0px);
     background-color: white;
     text-align: center;
@@ -172,20 +184,17 @@ h1:hover > span:nth-child(odd){
     font-family: 'Caudex', serif;
     display:flex;
     justify-content: space-evenly;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: lighter;
-
     position: absolute;
-    left: 50%; /* position the left edge of the element at the middle of the parent */
-
-    transform: translate(-50%, 20%); /* This is a shorthand of
-                                         translateX(-50%) and translateY(-50%) */
+    left: 50%; 
+    transform: translate(-50%, 20%); 
 }
 
 #main-menu ul {
     padding: 0px;
-    position: relative;
     display: flex;
+    position: relative;
 }
 
 #main-menu ul li {
@@ -193,7 +202,14 @@ h1:hover > span:nth-child(odd){
 }
 
 #main-menu ul li a {
-    margin: 20px;
+    display: inline-block;
+    margin: 30px;
     text-decoration: none;
     color:rgb(56, 53, 53);
+    transition: .3s;
+}
+
+#main-menu ul li a:hover {
+    transform: scale(1.2);
+    color: var(--hover-color);
 }
