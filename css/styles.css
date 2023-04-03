@@ -107,13 +107,13 @@ h1:hover > span:nth-child(odd){
 }
 
 .social-menu ul li .fa-brands {
-    color: #000000;
+    color: rgb(56, 53, 53);
     font-size: 25px;
     line-height: 50px;
     transition: .5s;
 }
 
-.social-menu ul li .fa-brands:hover {
+.social-menu ul li a:hover > .fa-brands{
     color: #ffffff;
 }
 
@@ -133,11 +133,11 @@ h1:hover > span:nth-child(odd){
     transform: rotate(0deg) skew(0deg) translate(0, -5px);
 }
 .social-menu ul li:nth-child(1) a:hover {
-    background-color: #2a434d;
+    background-color: rgb(56, 53, 53);
 }
 .social-menu ul li:nth-child(2) a:hover {
-    background-color: #2a434d;
+    background-color: rgb(56, 53, 53);
 }
 .social-menu ul li:nth-child(3) a:hover {
-    background-color: #2a434d;
+    background-color: rgb(56, 53, 53);
 }
