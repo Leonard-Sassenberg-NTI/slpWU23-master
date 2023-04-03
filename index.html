@@ -9,9 +9,19 @@
     <script src="https://kit.fontawesome.com/c0197ccf80.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id ="splash-placement">
+        <div class="splashscreen">
+            <img src=""/>
+            <h1>SGNE</h1>
+            <h4>59°19'45.0"N 18°04'07.0"E</h4>
+            
+            <div class="entli">Enter</div>
+        </div>
+    </div>
+
     <div class="grid-container">
         <div class ="grid-item item-1">
-            
+            <div id ="flex-holder-1">
             <div id = "title">
                 <h1 id ="s1"><span>S</span><span>eek</span
                 ></h1><h1 id ="s2"><span id ="s2">G</span><span>ood</span
@@ -23,8 +33,8 @@
                 <a href="#"><img scr="logo.png" class ="logo"></a>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Products</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#">News</a></li>
                     <li><a href="#">About</a></li>
                 </ul>
             </div>
@@ -33,16 +43,26 @@
                 <ul>
                     <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
                     <li><a href=""><i class="fa-regular fa-user"></i></a></li>
-                    <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </div>
-
+            </div>
         </div>
 
-        <div class ="grid-item item-2">2</div>
-        <div class ="grid-item item-3">3</div>
-        <div class ="grid-item item-4">4</div>
-        <div class ="grid-item item-6">6</div>
+        <div class ="grid-item item-2">
+            <section class ="img-section">
+                <div class="img-container">
+                  <div class="left"></div>
+                  <div class="right">
+                    <div class="content">
+                      <h1>Check out our gallery.</h1>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia assumenda dolore reprehenderit ullam blanditiis ex sapiente pariatur tempore incidunt facilis?</p>
+                      <a href="#" class="img-btn">Gallery 不</a>
+                    </div>
+                  </div>
+                </div>
+            </section>
+        </div>
+        <div class ="grid-item item-3"></div>
 
         <div class ="mainAxis"></div>
         <div class ="crossAxis"></div>
@@ -63,6 +83,10 @@
             </div>
           </div>
         </div>
-      </footer>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <script type="text/javascript" src="/js/javascript.js"></script>
 </body>
 </html>
