@@ -13,6 +13,7 @@
     --hover-color: #a06464;
     --footer-color: #d2d2d2;
     --grey: rgb(56, 53, 53);
+    --paper-color:
 }
 
 body {
@@ -46,18 +47,17 @@ body {
     display: flex;
     justify-content: center;
 
-    transform: perspective(600px) rotateY(45deg);
+    /*transform: perspective(600px) rotateX(60deg);*/
 }
 
 .paper {
     align-self: center;
     background: #fafafa;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3), 0 0 300px 25px rgba(222,198,122,0.7) inset;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3), 0 0 300px 25px rgba(255, 240, 189, 0.7) inset;
     width: 250px;
     height: 350px;
     padding: 24px;
     position: relative;
-    border-radius: 1px;
     left: 0;
     top: 0;
     display: flex;
@@ -67,15 +67,26 @@ body {
     user-select: none;
 }
 
+#corner {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 3.2em;
+    width: 1.7em;
+    transform: translate(-0.8em, -0.73em) rotate(-36.7deg);
+    background: linear-gradient(to left bottom, transparent 50%, rgba(255, 240, 189, 0.7) 0, rgba(255, 255, 255, 0.7) 27px, rgba(205, 192, 152, 0.7));
+    box-shadow: 0 5px 3px -5px #292311;
+    z-index:2;
+}
+
 .tex {
-    background-image: url(/img/paper1.jpg);
+    background-image: url(/img/paper2.jpg);
     background-size: cover;
     position: absolute;
-
     width: 250px;
     height: 350px;
     padding: 24px;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 #paper-texture1, #paper-texture2 {
@@ -97,13 +108,13 @@ body {
 .paper:before, #paper-texture1 {
     left: -5px;
     top: 2px;  
-    transform: rotate(-1.5deg);
+    transform: rotate(-2.4deg);
 }
 
 .paper:after, #paper-texture2 {
     right: -3px;
     top: 0px;
-    transform: rotate(2.4deg);
+    transform: rotate(4.3deg);
 }
 
 .paper:hover:before {
