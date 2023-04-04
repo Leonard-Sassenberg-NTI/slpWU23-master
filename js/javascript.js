@@ -16,12 +16,14 @@ function topFunction() {
 
 var splashScreen = document.querySelector('#splash-placement');
 var splashBtn = document.querySelector('#splash-outline');
+var body = document.querySelector('body');
 
 splashBtn.addEventListener('click',()=>{
   splashScreen.style.opacity = 0;
+  document.body.style.overflow = "scroll";
   setTimeout(()=>{
     splashScreen.classList.add('hidden')
-  },20)
+  },20) 
 });
 
 var timelineOptions = { repeat: -1, paused: true };
