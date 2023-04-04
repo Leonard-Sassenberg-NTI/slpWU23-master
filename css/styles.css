@@ -47,7 +47,7 @@ body {
     display: flex;
     justify-content: center;
 
-    /*transform: perspective(600px) rotateX(60deg);*/
+    /*transform: perspective(600px) rotateY(60deg);*/
 }
 
 .paper {
@@ -60,11 +60,18 @@ body {
     position: relative;
     left: 0;
     top: 0;
+}
+
+#front-paper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     user-select: none;
+}
+
+#copy-paper {
+    position:absolute;
 }
 
 #corner {
@@ -94,7 +101,7 @@ body {
     transition: .5s;
 }
 
-.paper:before, .paper:after {
+#copy-paper:before, #copy-paper:after {
     content: "";
     background: #fafafa;
     box-shadow: 0 0 8px rgba(0,0,0,0.2), inset 0 0 300px rgba(222,198,122,0.7);
@@ -105,46 +112,46 @@ body {
     transition: .5s;
 }
 
-.paper:before, #paper-texture1 {
+#copy-paper:before, #paper-texture1 {
     left: -5px;
     top: 2px;  
     transform: rotate(-2.4deg);
 }
 
-.paper:after, #paper-texture2 {
+#copy-paper:after, #paper-texture2 {
     right: -3px;
     top: 0px;
     transform: rotate(4.3deg);
 }
 
-.paper:hover:before {
+#copy-paper:hover:before {
     transform: rotate(0deg);
     left: -6px;
     top: -6px;
 }
 
-.paper:hover:after {
+#copy-paper:hover:after {
     transform: rotate(0deg);
     right: 3px;
     top: -3px;
 }
 
-.paper:hover > #paper-texture1 {
+#copy-paper:hover > #paper-texture1 {
     transform: rotate(0deg);
     left: -6px;
     top: -6px;
 }
 
-.paper:hover > #paper-texture2 {
+#copy-paper:hover > #paper-texture2 {
     transform: rotate(0deg);
     right: 3px;
     top: -3px;
 }
+
 
 .splash-text {
     position: relative;
-    color: var(--grey);
-    color: black;
+    color: rgba(0, 0, 0, 0.9);
     margin: 5px;
 }
 
@@ -170,6 +177,7 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-color: none;
+    opacity: 0.9;
 }
 
 .hidden{
