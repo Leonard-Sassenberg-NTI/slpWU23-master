@@ -58,8 +58,7 @@ body {
     height: 350px;
     padding: 24px;
     position: relative;
-    left: 0;
-    top: 0;
+    
 }
 
 #front-paper {
@@ -68,6 +67,8 @@ body {
     align-items: center;
     flex-direction: column;
     user-select: none;
+    transition: all ease .5s;
+    clip-path: polygon(83% 0, 90% 6%, 100% 14%, 100% 100%, 0 100%, 0 0);
 }
 
 #corner {
@@ -83,14 +84,14 @@ body {
 }
 
 .back {
-    content: "";
     background: #fafafa;
     box-shadow: 0 0 8px rgba(0,0,0,0.2), inset 0 0 300px rgba(222,198,122,0.7);
-    height: 100%;
-    width: 100%;
     position: absolute;
     z-index: -1;
     transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tex {
@@ -112,28 +113,28 @@ body {
     z-index: -2;
 }
 
-#paper-back1, #paper-texture1 {
-    left: -5px;
+#paper-back1 {
+    left: -10px;
     top: 2px;  
-    transform: rotate(-2.4deg);
+    transform: rotate(-5deg);
 }
 
-#paper-back2, #paper-texture2 {
-    right: -3px;
-    top: 0px;
+#paper-back2 {
+    right: -7px;
+    top: 5px;
     transform: rotate(4.3deg);
 }
 
-.paper:hover > #paper-back1{
-    transform: rotate(0deg);
+.paper:hover #paper-back1 {
+    transform: rotate(-1deg);
     left: -6px;
     top: -6px;
 }
 
-.paper:hover > #paper-back2{
-    transform: rotate(0deg);
-    right: 3px;
-    top: -3px;
+.paper:hover #paper-back2 {
+    right: -2px;
+    top: 3px;
+    transform: rotate(1.3deg);
 }
 
 
