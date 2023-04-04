@@ -45,6 +45,8 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
+
+    transform: perspective(600px) rotateY(45deg);
 }
 
 .paper {
@@ -56,22 +58,20 @@ body {
     padding: 24px;
     position: relative;
     border-radius: 1px;
-
+    left: 0;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     user-select: none;
-
-    transform: skew(-30deg, 0deg);
 }
 
 .tex {
     background-image: url(/img/paper1.jpg);
     background-size: cover;
     position: absolute;
-    left: 0;
-    top: 0;
+
     width: 250px;
     height: 350px;
     padding: 24px;
