@@ -17,7 +17,8 @@
     --paper-color: rgba(75, 63, 23, 0.7);
     --paper-main:rgb(177, 177, 177);
     --paper-shadow:rgba(0,0,0,0.3);
-    --paper-fonts:rgb(47, 28, 28);
+    --paper-fonts:#2f1c1c;
+    --paper-logo: invert(8%) sepia(29%) saturate(880%) hue-rotate(314deg) brightness(100%) contrast(90%);
 }
 
 body {
@@ -54,6 +55,21 @@ body {
     /*transform: perspective(600px) rotateY(60deg);*/
 }
 
+#temp {
+    width: 250px;
+    height: 350px;
+    padding: 24px;
+    align-self: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    user-select: none;
+    transition: .25s;
+    cursor: pointer;
+}
+
 .paper-screen {
     width: 250px;
     height: 350px;
@@ -62,9 +78,6 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    user-select: none;
 }
 
 .paper {
@@ -101,8 +114,26 @@ body {
     height: 2em;
     width: 2em;
     transform: translate(-0.65em, 0.71em) scale(1.65, 1.65) rotate(2.7deg);
-    background: linear-gradient(to left bottom, transparent 50%, rgba(225, 219, 200, 0.7) 0, rgba(255, 254, 247, 0.7) 27px, rgba(255, 244, 232, 0.7));
+    background: linear-gradient(to left bottom, transparent 50%, rgba(204, 199, 182, 0.7) 0, rgba(240, 238, 218, 0.7) 27px, rgba(255, 243, 224, 0.7));
     box-shadow: -0px 5px 3px -5px var(--paper-shadow);
+    transition: all ease .5s;
+}
+
+.paper-screen:hover #corner{
+    transform: scale(1.05, 1.02) rotate(1.4deg);
+    border-bottom-left-radius: 3px 40px;
+}
+
+.paper-screen:hover #front-paper {
+    clip-path: polygon(89% 0%, 90% 0.4%, 100% 8%, 100% 100%, 0 100%, 0 0);
+}
+
+.paper-screen:hover #paper-texture {
+    clip-path: polygon(89% 0%, 90% 0.4%, 100% 8%, 100% 100%, 0 100%, 0 0);
+}
+
+.paper-screen:hover #temp {
+    transform: scale(0.95);
 }
 
 .back {
@@ -187,6 +218,7 @@ body {
     background-size: contain;
     background-color: none;
     opacity: 0.9;
+    filter: var(--paper-logo);
 }
 
 .hidden{
@@ -205,6 +237,7 @@ body {
     z-index: 10;
     cursor: pointer;
     border-radius: 10px;
+    visibility: hidden;
 }
 
 #Enter {

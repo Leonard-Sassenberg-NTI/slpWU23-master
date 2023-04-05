@@ -15,7 +15,7 @@ function topFunction() {
 };
 
 var splashScreen = document.querySelector('#splash-placement');
-var splashBtn = document.querySelector('#splash-outline');
+var splashBtn = document.querySelector('#temp');
 var body = document.querySelector('body');
 
 splashBtn.addEventListener('click',()=>{
