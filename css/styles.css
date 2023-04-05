@@ -13,7 +13,11 @@
     --hover-color: #a06464;
     --footer-color: #d2d2d2;
     --grey: rgb(56, 53, 53);
-    --paper-color: rgba(222,198,122,0.7);
+    
+    --paper-color: rgba(75, 63, 23, 0.7);
+    --paper-main:rgb(177, 177, 177);
+    --paper-shadow:rgba(0,0,0,0.3);
+    --paper-fonts:rgb(47, 28, 28);
 }
 
 body {
@@ -65,7 +69,7 @@ body {
 
 .paper {
     align-self: center;
-    background:rgba(205, 192, 152, 1);
+    background: var(--paper-main);
     width: 250px;
     height: 350px;
     padding: 24px;
@@ -84,7 +88,7 @@ body {
 
 #paper1-shadow {
     align-self: center;
-    filter: drop-shadow(0 0 10px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 0 10px var(--paper-shadow));
     position: absolute;
     display:flex;
     justify-content:center;
@@ -94,15 +98,15 @@ body {
     position: absolute;
     top: 0px;
     right: 0px;
-    height: 3.2em;
-    width: 1.7em;
-    transform: translate(-0.8em, -0.73em) rotate(-36.7deg);
-    background: linear-gradient(to left bottom, transparent 50%, rgba(255, 240, 189, 0.7) 0, rgba(255, 255, 255, 0.7) 27px, rgba(205, 192, 152, 0.7));
-    box-shadow: 0 5px 3px -5px #292311;
+    height: 2em;
+    width: 2em;
+    transform: translate(-0.65em, 0.71em) scale(1.65, 1.65) rotate(2.7deg);
+    background: linear-gradient(to left bottom, transparent 50%, rgba(225, 219, 200, 0.7) 0, rgba(255, 254, 247, 0.7) 27px, rgba(255, 244, 232, 0.7));
+    box-shadow: -0px 5px 3px -5px var(--paper-shadow);
 }
 
 .back {
-    box-shadow: 0 0 8px rgba(0,0,0,0.2), inset 0 0 300px var(--paper-color);
+    box-shadow: 0 0 8px var(--paper-shadow), inset 0 0 300px var(--paper-color);
     z-index: -1;
 }
 
@@ -156,7 +160,7 @@ body {
 
 .splash-text {
     position: relative;
-    color: rgba(0, 0, 0, 0.9);
+    color: var(--paper-fonts);
     margin: 5px;
 }
 
