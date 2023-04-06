@@ -27,7 +27,7 @@
     --footer-color: #d2d2d2;
     --grey: rgb(56, 53, 53);
     
-    --paper-color: rgba(75, 63, 23, 0.7);
+    --paper-color: rgba(206, 195, 160, 0.7);
     --paper-main:rgb(177, 177, 177);
     --paper-shadow:rgba(0,0,0,0.3);
     --paper-fonts:#2f1c1c;
@@ -53,11 +53,18 @@ body {
     width: 100%;
     transform: translate(-50%,-50%); 
     background-color:white;
-    z-index: 10;
+    z-index:3;
     transition : all ease-in-out 500ms;
+}
+
+#noise {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 
     box-shadow: inset 0 0 100px rgba(0,0,0,0.9);
-    background: radial-gradient(circle at 50% 50%,#e1e1e1 20%,#555);
+    background: radial-gradient(circle at 50% 50%,rgba(225, 225, 225, 0) 20%,#555);
 }
 
 .splashscreen {
@@ -121,6 +128,31 @@ body {
     justify-content:center;
 }
 
+#coffee-stain {
+    position:absolute;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: url(/img/cup-coffee-stain-5.png),
+                    url(/img/cup-coffee-stain-4.png);
+
+    background-size: contain, 
+                    contain,
+                    contain;
+
+    background-repeat: no-repeat,
+                    no-repeat, 
+                    no-repeat;
+
+    background-position: bottom -100px left -80px,
+                        top -150px right -55px,
+                        top 0 right 0;
+
+    filter: blur(0px) contrast(95%) brightness(0.45) hue-rotate(355deg);
+    opacity: 65%;
+}
+
 #corner {
     position: absolute;
     top: 0px;
@@ -128,7 +160,7 @@ body {
     height: 2em;
     width: 2em;
     transform: translate(-0.65em, 0.71em) scale(1.65, 1.65) rotate(2.7deg);
-    background: linear-gradient(to left bottom, transparent 50%, rgba(204, 199, 182, 0.7) 0, rgba(240, 238, 218, 0.7) 27px, rgba(255, 243, 224, 0.7));
+    background: linear-gradient(to left bottom, transparent 50%, rgba(204, 199, 182, 0.8) 0, rgba(240, 238, 218, 1) 27px, rgba(255, 243, 224, 1));
     box-shadow: -0px 5px 3px -5px var(--paper-shadow);
     transition: all ease .5s;
 }
@@ -211,9 +243,9 @@ body {
     position: relative;
     color: var(--paper-fonts);
     margin: 5px;
-    /*background: url(/img/font-dot2.png) no-repeat center center;
+    /*background: url(/img/font-dot2.png) no-repeat r center;
     background-size: 100%;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;cente
     -webkit-background-clip: text;
     -moz-background-clip:text;
     background-clip:text; 

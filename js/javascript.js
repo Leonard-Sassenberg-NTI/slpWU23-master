@@ -18,6 +18,7 @@ var splashScreen = document.querySelector('#splash-placement');
 var splashBtn = document.querySelector('#temp');
 var body = document.querySelector('body');
 
+/*
 splashBtn.addEventListener('click',()=>{
   splashScreen.style.opacity = 0;
   document.body.style.overflow = "scroll";
@@ -25,6 +26,7 @@ splashBtn.addEventListener('click',()=>{
     splashScreen.classList.add('hidden')
   },20) 
 });
+*/
 
 var timelineOptions = { repeat: -1, paused: true };
 var tl = new TimelineMax(timelineOptions);
