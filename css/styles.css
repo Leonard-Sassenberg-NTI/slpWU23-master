@@ -138,19 +138,16 @@ body {
                     url(/img/cup-coffee-stain-4.png);
 
     background-size: contain, 
-                    contain,
                     contain;
 
     background-repeat: no-repeat,
-                    no-repeat, 
                     no-repeat;
 
     background-position: bottom -100px left -80px,
-                        top -150px right -55px,
-                        top 0 right 0;
+                        top -150px right -55px;
 
     filter: blur(0px) contrast(95%) brightness(0.45) hue-rotate(355deg);
-    opacity: 65%;
+    opacity: 85%;
 }
 
 #corner {
@@ -260,22 +257,47 @@ body {
     display:flex;
     justify-content:center;
     align-items:center;
+    flex-direction:column;
     position:relative;
     padding: 0.2em 0;
 }
 
-#splash-title:after{
+#splash-title:after{ /*underline code*/
     content: '';
     position: absolute;
-    width: 80%;
+    width: 65%;
     background:white;
     transform: scaleX(0);
     height: 1.5px;
-    bottom: 0;
+    bottom: -2.75px;
     background-color: var(--paper-fonts);
     /*transform-origin: bottom right; från vänster till höger in och ut*/
     transform-origin: center;
     transition: transform 0.25s ease-out;
+}
+
+#splash-title a {
+    transition: 0.25s ease-out;
+}
+
+#splash-title a:nth-child(even) {
+    transform:translate(0px, 4px);
+}
+
+#splash-title a:nth-child(odd) {
+    transform:translate(0px, -4px);
+}
+
+.paper-screen:hover #splash-title a:nth-child(even) {
+    transform:translate(0px, 0px) scale(1.2);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.paper-screen:hover #splash-title a:nth-child(odd) {
+    transform:translate(0px, 0px) scale(1.2);
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .paper-screen:hover #splash-title:after{
@@ -290,7 +312,7 @@ body {
 #absolute-logo {
     position: relative;
     text-align:center;
-    transform: rotate(0deg) translate(-5%,-0%); 
+    transform: rotate(0deg) translate(0,0); 
     width: 100px;
     height: 175px;
     background-image: url("/img/one_cross.png");
