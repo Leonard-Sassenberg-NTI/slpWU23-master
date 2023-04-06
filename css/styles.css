@@ -8,6 +8,19 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'momstypewriterregular';
+    src: url('Moms_typewriter-webfont.eot');
+    src: url('Moms_typewriter-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Moms_typewriter-webfont.woff2') format('woff2'),
+         url('Moms_typewriter-webfont.woff') format('woff'),
+         url('Moms_typewriter-webfont.ttf') format('truetype'),
+         url('Moms_typewriter-webfont.svg#momstypewriterregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 :root {
     --menu-shadow: 0px 0px 0px #b7b7b7;
     --hover-color: #a06464;
@@ -97,6 +110,7 @@ body {
     box-shadow: 0 0 300px 25px var(--paper-color) inset;
     transition: all ease .5s;
     clip-path: polygon(83% 0, 90% 6%, 100% 14%, 100% 100%, 0 100%, 0 0);
+    border-radius: 5px 10px 40px 20px/100px 100px 5px 7.5px;
 }
 
 #paper1-shadow {
@@ -120,7 +134,7 @@ body {
 }
 
 .paper-screen:hover #corner{
-    transform: scale(1.05, 1.02) rotate(1.4deg);
+    transform: scale(0.92, 0.95) rotate(1.4deg);
     border-bottom-left-radius: 3px 40px;
 }
 
@@ -139,10 +153,11 @@ body {
 .back {
     box-shadow: 0 0 8px var(--paper-shadow), inset 0 0 300px var(--paper-color);
     z-index: -1;
+    border-radius: 3px 4px 20px 24px/30px 20px 2px 0px;
 }
 
 .tex {
-    background-image: url(/img/paper2.jpg);
+    background-image: url(/img/paper3.jpg);
     background-size: cover;
     position: absolute;
     width: 250px;
@@ -154,14 +169,17 @@ body {
 
 #paper-texture {
     clip-path: polygon(83% 0, 90% 6%, 100% 14%, 100% 100%, 0 100%, 0 0);
+    border-radius: 5px 10px 40px 20px/100px 100px 5px 7.5px;
 }
 
 #paper-texture1 {
     z-index: -1;
+    border-radius: 3px 4px 20px 24px/30px 20px 2px 0px;
 }
 
 #paper-texture2 {
     z-index: -2;
+    border-radius: 3px 4px 20px 24px/30px 20px 2px 0px;
 }
 
 #paper-back1 {
@@ -193,24 +211,54 @@ body {
     position: relative;
     color: var(--paper-fonts);
     margin: 5px;
+    /*background: url(/img/font-dot2.png) no-repeat center center;
+    background-size: 100%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip:text;
+    background-clip:text; 
+    background-color: var(--paper-fonts);*/
 }
 
 #splash-title {
     font-family: 'bad_comaregular';
     font-weight: lighter;
+    font-size: 35px;
+    transition: .5s;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    padding: 0.2em 0;
+}
+
+#splash-title:after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    background:white;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    background-color: var(--paper-fonts);
+    /*transform-origin: bottom right; från vänster till höger in och ut*/
+    transform-origin: center;
+    transition: transform 0.25s ease-out;
+}
+
+.paper-screen:hover #splash-title:after{
+    transform: scaleX(1);
+    transform-origin: center;
 }
 
 #splash-coords {
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    text-decoration-thickness: 1px;
+    font-size: 10px;
 }
 
 #absolute-logo {
     position: relative;
     text-align:center;
-    transform: translate(-5%,-0%); 
-    
+    transform: rotate(0deg) translate(-5%,-0%); 
     width: 100px;
     height: 175px;
     background-image: url("/img/one_cross.png");
@@ -219,6 +267,11 @@ body {
     background-color: none;
     opacity: 0.9;
     filter: var(--paper-logo);
+    transition: transform 0.5s ease-out;
+}
+
+.paper-screen:hover #absolute-logo {
+    
 }
 
 .hidden{
